@@ -13,12 +13,6 @@ import MainGame.Playing;
 
 public class Tile {
 
-	/**
-	 * This is the Tile class.
-	 * This is where you can change the SIZE of the map, the block size, etc.
-	 * This is the base class of tiles, you will be able to use poly and extend this class to make
-	 * more complex tiles.
-	 */
 
 	public static final int SIZE = 300;
 	public static final int BLOCK = 32;
@@ -35,7 +29,6 @@ public class Tile {
 	protected MouseHandler mouse;
 	boolean showBorders = false;
 
-	//The constructor.
 	public Tile(float x, float y, int id, String location) {
 		this.oX = x;
 		this.oY = y;
@@ -58,7 +51,6 @@ public class Tile {
 		oY = y;
 	}
 
-	//Updates the tile.
 	public void update(int delta) {
 		x = oX - Playing.offsetX;
 		y = oY - Playing.offsetY;
@@ -71,7 +63,6 @@ public class Tile {
 		}
 	}
 
-	//Renders the tile to the screen.
 	public void render(Graphics g) {
 		tile.draw(x, y, BLOCK, BLOCK);
 		

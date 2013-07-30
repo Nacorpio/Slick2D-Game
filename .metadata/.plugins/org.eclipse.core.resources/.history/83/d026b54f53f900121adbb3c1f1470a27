@@ -7,14 +7,6 @@ import org.newdawn.slick.SlickException;
 
 public class FastInv {
 
-	/**
-	 * This is the FastInv class.
-	 * This is the mini inventory, that's on the bottom right.
-	 * This inventory is accessed by moving the mouse wheel and clicking.
-	 * You will be able to drag a item from the big inventory (I)
-	 * and place it in the mini inventory AKA FastInv
-	 */
-	
 	private static int counter = 1;
 	private int rectX;
 	private int rectY;
@@ -22,10 +14,8 @@ public class FastInv {
 	public int extraX = 3;
 	public int extraY = 3;
 
-	//The inventory slots.
 	private static Item smallInv[] = { null, null, null, null };
 
-	//The init of the inventory (Sets everything up).
 	public void init() throws SlickException {
 		invImage = new Image("images/inv.png");
 		addItem(new GlowingSeeds());
@@ -34,7 +24,6 @@ public class FastInv {
 		addItem(new WateringCan(Tool.types.CHALCEUS));
 	}
 
-	//Renders the base of the inventory to the bottom right corner.
 	public void render(Graphics g) {
 		g.drawImage(invImage, Game.screenWidth - 150 - extraX, Game.screenHeight - 150 - extraY);
 
@@ -46,7 +35,6 @@ public class FastInv {
 		g.drawRect(rectX, rectY, 50 - 1, 50 - 1);
 	}
 
-	//Adds a item to the inventory.
 	public void addItem(Item item) {
 		for (int i = 0; i < 4; i++) {
 			if (smallInv[i] == null) {
@@ -57,7 +45,6 @@ public class FastInv {
 		}
 	}
 
-	//Removes a item from the inventory.
 	public void removeItem(Item item) {
 		for (int i = 0; i < 4; i++) {
 			
@@ -70,12 +57,10 @@ public class FastInv {
 		}
 	}
 
-	//Returns a item in the inventory.
 	public Item getItem(int slot) {
 		return smallInv[slot];
 	}
 
-	//Returns the item slot number of the item in the inventory.
 	public int getItemSlot(Item item) {
 		for (int i = 0; i < smallInv.length; i++) {
 			if (smallInv[i] == item) {
@@ -86,7 +71,6 @@ public class FastInv {
 		return -1;
 	}
 
-	//Updates the inventory.
 	public void update() {
 		int wheel = Mouse.getDWheel();
 		if (wheel < 0) {
