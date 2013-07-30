@@ -5,8 +5,6 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 public abstract class Crops extends Item {
-	
-	//THis is the crops class
 		
 		private Image crop;
 		protected int x;
