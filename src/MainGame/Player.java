@@ -11,6 +11,8 @@ import org.peter.generator.Level;
 import org.peter.generator.Tile;
 
 public class Player {
+
+ //Player class. This is where all the stuff that has to do with the player happens.
 	
 	public static Rectangle playerBounds;
 	private static Animation player, up, down, left, right;
