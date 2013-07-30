@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emitter imageName="" name="particle">
+	<spawnInterval enabled="true" max="100.0" min="50.0"/>
+	<spawnCount enabled="true" max="25.0" min="10.0"/>
+	<initialLife enabled="true" max="2500.0" min="2500.0"/>
+	<initialSize enabled="true" max="15.0" min="15.0"/>
+	<xOffset enabled="true" max="450.0" min="-450"/>
+	<yOffset enabled="true" max="0.0" min="0"/>
+	<initialDistance enabled="true" max="0.0" min="0.0"/>
+	<speed enabled="true" max="0.0" min="0.0"/>
+	<length enabled="false" max="5000.0" min="5000.0"/>
+	<spread value="0.0"/>
+	<angurlarOffset value="0.0"/>
+	<growthFactor value="0.0"/>
+	<gravityFactor value="7.0"/>
+	<startAlpha value="255.0"/>
+	<endAlpha value="255.0"/>
+	<color>
+		<step b="1.0" g="0.1" offset="0.0" r="0.0"/>
+	</color>
+</emitter>
